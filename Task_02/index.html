@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Form + To-Do App</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav>
+    <h1>My Website</h1>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="content fade-in">
+      <h2>Welcome</h2>
+      <p>This is a responsive webpage that includes a contact form, dynamic to-do list, and mobile-friendly layout.</p>
+
+      <br style="margin: 2rem 0;">
+      <h2>To-Do List</h2>
+      <div class="todo-section">
+        <input type="text" id="taskInput" placeholder="Enter a new task">
+        <button id="addTaskBtn">Add Task</button>
+        <ul id="taskList">
+        </ul>
+      </div>
+    </div>
+
+    <div class="form-container fade-in">
+      <h2>Contact Form</h2>
+      <form id="contactForm" novalidate>
+        <label for="name"><i class="fa fa-user"></i> Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name">
+        <div id="nameError" class="error"></div>
+
+        <label for="email"><i class="fa fa-envelope"></i> Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com">
+        <div id="emailError" class="error"></div>
+
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2025 My Website. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
