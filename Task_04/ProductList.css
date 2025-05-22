@@ -1,0 +1,195 @@
+:root {
+    --bg-light: #e0f7fa;
+    --bg-dark: #1e1e2f;
+    --text-light: #333;
+    --text-dark: #f1f1f1;
+    --card-light: white;
+    --card-dark: #2c2c3e;
+    --primary: #00f2fe;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--bg-light);
+    color: var(--text-light);
+    transition: background 0.5s, color 0.5s;
+    display: flex;
+    flex-direction: column;
+}
+
+body.dark {
+    background: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+header,
+footer {
+    background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.5s;
+}
+
+body.dark header,
+body.dark footer {
+    background: linear-gradient(90deg, #3a3a5a 0%, #5e5e8a 100%);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    animation: fadeIn 1s ease-in-out;
+}
+
+footer {
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 12px;
+    background: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s;
+}
+
+.theme-toggle:hover {
+    background: #f0f0f0;
+}
+
+@media (max-width : 768px) {
+    .theme-toggle {
+        top: 0;
+        right: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    padding: 30px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 40px;
+    background: var(--card-light);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+    transition: background 0.5s;
+}
+
+body.dark .filters {
+    background: var(--card-dark);
+}
+
+.filters div {
+    flex: 1;
+    min-width: 200px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 8px rgba(0, 242, 254, 0.4);
+}
+
+body.dark #category {
+    background-color: #1e1e2f;
+    color: #f0f0f0;
+    border: none;
+}
+
+body.dark #price {
+    background-color: #1e1e2f;
+    color: #f0f0f0;
+    border: none;
+}
+
+body.dark #sort {
+    background-color: #1e1e2f;
+    color: #f0f0f0;
+    border: none;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.card {
+    background: var(--card-light);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s, background 0.5s;
+}
+
+body.dark .card {
+    background: var(--card-dark);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #007acc;
+    font-size: 1.2rem;
+}
+
+.card p {
+    margin: 8px 0;
+}

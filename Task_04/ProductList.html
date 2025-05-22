@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Page</title>
+  <link rel="stylesheet" href="ProductList.css">
+
+</head>
+
+<body>
+  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+  <header>
+    <h1>Exciting Products List</h1>
+  </header>
+
+  <div class="container">
+    <div class="filters">
+      <div>
+        <label for="category">Category</label>
+        <select id="category">
+          <option value="All">All</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Books">Books</option>
+          <option value="Clothing">Clothing</option>
+        </select>
+      </div>
+      <div>
+        <label for="price">Max Price</label>
+        <select id="price">
+          <option value="200">200</option>
+          <option value="150">150</option>
+          <option value="100">100</option>
+          <option value="50">50</option>
+          <option value="25">25</option>
+        </select>
+      </div>
+      <div>
+        <label for="sort">Sort by</label>
+        <select id="sort">
+          <option value="rating">Rating</option>
+          <option value="price">Price</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="products" id="productContainer"></div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Product Store. All rights reserved.</p>
+  </footer>
+
+  <script src="ProductList.js"></script>
+</body>
+
+</html>

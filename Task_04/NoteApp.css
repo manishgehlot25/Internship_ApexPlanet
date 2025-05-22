@@ -1,0 +1,234 @@
+:root {
+    --bg-color: #fdfbfb;
+    --text-color: #333;
+    --card-bg: white;
+}
+
+body.dark {
+    --bg-color: #2d2c2c;
+    --text-color: #e1e1e1;
+    --card-bg: #464444;
+}
+
+body.dark #noteInput {
+    background-color: #464444;
+    color: #e1e1e1;
+    border: 2px solid linear-gradient(to right, #00c8ff58, #0073ff69);
+}
+
+body.dark #colorPicker {
+    background-color: #464444;
+    color: #e1e1e1;
+    border: 2px solid linear-gradient(to right, #00c8ff58, #0073ff69);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+header {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: white;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    position: relative;
+}
+
+body.dark header {
+    background: linear-gradient(to right, #00c8ff58, #0073ff69);
+    color: white;
+}
+
+#toggleTheme {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 2px solid white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+main {
+    padding: 1rem;
+    flex-grow: 1;
+}
+
+.note-container {
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 2px solid #00c6ff;
+    border-radius: 8px;
+    resize: none;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#colorPicker {
+    border: 2px solid #00c6ff;
+}
+
+select,
+button {
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    border: none;
+}
+
+select {
+    flex: 1;
+    max-width: 48%;
+}
+
+button {
+    background-color: #00c6ff;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+body.dark button {
+    background-color: #00c8ff58;
+    color: white;
+}
+
+button:hover {
+    background-color: #0072ff;
+}
+
+body.dark button:hover {
+    background-color: #0073ff69;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: var(--card-bg);
+    border-left: 5px solid #00c6ff;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+li:hover {
+    transform: scale(1.01);
+}
+
+li button {
+    position: absolute;
+    top: 10px;
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+li button:first-of-type {
+    right: 70px;
+    background: #00c6ff;
+}
+
+body.dark li button:first-of-type {
+    right: 70px;
+    background: #00c8ff58;
+}
+
+li button:last-of-type {
+    right: 10px;
+    background: #ff4d4d;
+}
+
+body.dark li button:last-of-type {
+    right: 10px;
+    background: #ff4d4daa;
+}
+
+footer {
+    background: linear-gradient(to left, #00c6ff, #0072ff);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+body.dark footer {
+    background: linear-gradient(to left, #00c8ff58, #0073ff69);
+    color: white;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 600px) {
+    .controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #toggleTheme {
+        position: static;
+        margin-top: 1rem;
+    }
+
+    select,
+    button {
+        max-width: 100%;
+    }
+
+    li {
+        font-size: 0.9rem;
+    }
+
+    li button {
+        position: absolute;
+        display: inline-block;
+        margin-top: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+    li button:last-of-type {
+        right: 0px;
+        background: #ff4d4d;
+    }
+
+    body.dark li button:last-of-type {
+        right: 0px;
+        background: #ff4d4daa;
+    }
+}
