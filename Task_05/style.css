@@ -1,0 +1,142 @@
+:root {
+  --bg: #ffffff;
+  --text: #1a1a1a;
+  --card-bg: #f0f0f0;
+  --btn-bg: #4f46e5;
+  --btn-text: #ffffff;
+}
+
+body.dark {
+  --bg: #1a1a1a;
+  --text: #f9f9f9;
+  --card-bg: #2a2a2a;
+  --btn-bg: #6366f1;
+  --btn-text: #ffffff; 
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.header {
+  background: linear-gradient(to right, #7f00ff, #e100ff);
+  color: white;
+  padding: 1rem 2rem;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+nav button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.main {
+  padding: 2rem;
+  text-align: center;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background-color: var(--card-bg);
+  padding: 1rem;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card button {
+  margin-top: 10px;
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.footer {
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+  margin: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.filters input,
+.filters select {
+  padding: 8px;
+  font-size: 16px;
+}
+
+.category-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 20px;
+}
+
+.category-nav a {
+  text-decoration: none;
+  padding: 8px 12px;
+  background-color: #eee;
+  border-radius: 5px;
+  color: #333;
+  transition: background 0.2s;
+}
+
+.category-nav a:hover {
+  background-color: #ddd;
+}

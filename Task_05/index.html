@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShopEase</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <h1>ShopEase</h1>
+      <nav>
+        <a href="cart.html" class="cart-icon">Cart</a>
+        <button id="theme-toggle">🌙</button>
+      </nav>
+    </div>
+  </header>
+  <main class="main">
+    <section class="filters">
+      <input type="text" id="search-input" placeholder="Search products..." />
+      <select id="category-filter">
+        <option value="all">All Categories</option>
+        <option value="electronics">Electronics</option>
+        <option value="fashion">Fashion</option>
+        <option value="home">Home & Living</option>
+        <option value="beauty">Beauty</option>
+        <option value="sports">Sports</option>
+      </select>
+    </section>
+
+    <nav class="category-nav">
+      <a href="#electronics">Electronics</a>
+      <a href="#fashion">Fashion</a>
+      <a href="#home">Home & Living</a>
+      <a href="#beauty">Beauty</a>
+      <a href="#sports">Sports</a>
+    </nav>
+
+    <h2 id="electronics">Electronics</h2>
+    <div class="product-grid">
+      <div class="card">
+        <img src="01.webp" alt="Wireless Headphones">
+        <h3>Wireless Headphones</h3>
+        <p>$99.99</p>
+        <button onclick="addToCart('Wireless Headphones', '$99.99', '01.webp')">Add to Cart</button>
+      </div>
+      <div class="card">
+        <img src="02.webp" alt="Smart Watch">
+        <h3>Smart Watch</h3>
+        <p>$199.99</p>
+        <button onclick="addToCart('Smart Watch', '$199.99', '02.webp')">Add to Cart</button>
+      </div>
+      <div class="card">
+        <img src="03.webp" alt="Gaming Mouse">
+        <h3>Gaming Mouse</h3>
+        <p>$49.99</p>
+        <button onclick="addToCart('Gaming Mouse', '$49.99', '03.webp')">Add to Cart</button>
+      </div>
+    </div>
+
+    <h2 id="fashion">Fashion</h2>
+    <div class="product-grid">
+      <div class="card">
+        <img src="04.avif" alt="Men's Jacket">
+        <h3>Men's Jacket</h3>
+        <p>$59.99</p>
+        <button onclick="addToCart('Men\'s Jacket', '$59.99', '04.avif')">Add to Cart</button>
+      </div>
+      <div class="card">
+        <img src="05.png" alt="Summer Dress">
+        <h3>Summer Dress</h3>
+        <p>$39.99</p>
+        <button onclick="addToCart('Summer Dress', '$39.99', '05.png')">Add to Cart</button>
+      </div>
+      <div class="card">
+        <img src="06.png" alt="Casual Sneakers">
+        <h3>Casual Sneakers</h3>
+        <p>$69.99</p>
+        <button onclick="addToCart('Casual Sneakers', '$69.99', '06.png')">Add to Cart</button>
+      </div>
+    </div>
+
+    <h2 id="home">Home & Living</h2>
+    <div class="product-grid">
+      <div class="card">
+        <img src="07.avif" alt="Desk Lamp">
+        <h3>Desk Lamp</h3>
+        <p>$29.99</p>
+        <button onclick="addToCart('Desk Lamp', '$29.99', '07.avif')">Add to Cart</button>
+      </div>
+      <div class="card">
+        <img src="08.jpg" alt="Sofa Set">
+        <h3>Sofa Sets</h3>
+        <p>$299.99</p>
+        <button onclick="addToCart('Area Rug', '$299.99', '08.jpg')">Add to Cart</button>
+      </div>
+      <div class="card">
+        <img src="09.webp" alt="Wall Clock">
+        <h3>Wall Clock</h3>
+        <p>$19.99</p>
+        <button onclick="addToCart('Wall Clock', '$19.99', '09.webp')">Add to Cart</button>
+      </div>
+    </div>
+
+    <h2 id="beauty">Beauty</h2>
+    <div class="product-grid">
+      <div class="card">
+        <img src="10.png" alt="Skin Care">
+        <h3>Skin Care</h3>
+        <p>$9.99</p>
+        <button onclick="addToCart('Matte Lipstick', '$9.99', '10.png')">Add to Cart</button>
+      </div>
+      <div class="card">
+        <img src="11.avif" alt="Floral Perfume">
+        <h3>Floral Perfume</h3>
+        <p>$49.99</p>
+        <button onclick="addToCart('Floral Perfume', '$49.99', '11.avif')">Add to Cart</button>
+      </div>
+      <div class="card">
+        <img src="12.avif" alt="Face Cream">
+        <h3>Face Cream</h3>
+        <p>$24.99</p>
+        <button onclick="addToCart('Face Cream', '$24.99', '12.avif')">Add to Cart</button>
+      </div>
+    </div>
+
+    <h2 id="sports">Sports</h2>
+    <div class="product-grid">
+      <div class="card">
+        <img src="13.png" alt="Football">
+        <h3>Football</h3>
+        <p>$19.99</p>
+        <button onclick="addToCart('Football', '$19.99', '13.png')">Add to Cart</button>
+      </div>
+      <div class="card">
+        <img src="14.jpg" alt="Yoga Mat">
+        <h3>Yoga Mat</h3>
+        <p>$29.99</p>
+        <button onclick="addToCart('Yoga Mat', '$29.99', '14.jpg')">Add to Cart</button>
+      </div>
+      <div class="card">
+        <img src="15.jpg" alt="Tennis Racket">
+        <h3>Tennis Racket</h3>
+        <p>$59.99</p>
+        <button onclick="addToCart('Tennis Racket', '$59.99', '15.jpg')">Add to Cart</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 ShopEase Inc. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
